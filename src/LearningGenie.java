@@ -1,10 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 class LearningGenie {
 
-    public static void main (String[] args) {
+    public static void main (String[] args) throws FileNotFoundException {
         Scanner in = new Scanner(System.in);
-        DecisionTree DTree = new DecisionTree();
+        DecisionTree DTree = new DecisionTree();//new File("Z:\\Grinnell\\CSC 207\\Homeworks\\Learning Genie\\data"));
 
         System.out.println("I am the learning genie!");
         System.out.println("I can figure out whatever you are thinking of by asking questions.");
@@ -28,7 +32,12 @@ class LearningGenie {
             }
         }
 
-        // WRITE: DTree.write(out);
+        try {
+            FileWriter f = new FileWriter("Z:\\Grinnell\\CSC 207\\Homeworks\\Learning Genie\\data");
+            DTree.write(f);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         in.close();
         System.exit(0);
