@@ -25,12 +25,12 @@ class LearningGenie {
             System.out.println("Think of an object.\n");
             DTree.guess(in);
             System.out.print("Do you want to continue? ");
-            String userAnswer = in.nextLine().toLowerCase();
+            String userAnswer = in.nextLine().trim().toLowerCase();
 
             while (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
                 System.out.println("Incorrect response! Please enter yes/no");
                 System.out.print("Do you want to continue? ");
-                userAnswer = in.nextLine();
+                userAnswer = in.nextLine().trim().toLowerCase();
             }
 
             if(userAnswer.equals("no")) {

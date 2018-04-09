@@ -28,8 +28,7 @@ public class GuessNode implements DecisionNode{
         while (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
             System.out.println("Incorrect response! Please enter yes/no!");
             System.out.print("Are you thinking of " + object + "?");
-            userAnswer = in.nextLine();
-            System.out.println(userAnswer);
+            userAnswer = in.nextLine().trim().toLowerCase();
         }
 
         if (userAnswer.equals("yes")) {

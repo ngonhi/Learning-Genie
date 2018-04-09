@@ -30,12 +30,12 @@ public class QuestionNode implements DecisionNode{
 
     public DecisionNode guess(Scanner in) {
         System.out.print(question);
-        String ans = in.nextLine().toLowerCase();
+        String ans = in.nextLine().trim().toLowerCase();
 
         while (!ans.equals("yes") && !ans.equals("no")) {
             System.out.println("Incorrect response! Please enter yes/no");
             System.out.print(question + " ");
-            ans = in.nextLine();
+            ans = in.nextLine().trim().toLowerCase();
         }
 
         // Update the subtrees during the game
