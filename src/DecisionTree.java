@@ -47,14 +47,28 @@ class DecisionTree {
     }
 
     // Methods
+    /**
+     * Returns a count of the number of objects this decision tree records
+     * @return count, an integer
+     */
     public int countObjects() {
         return root.countObjects();
     } // countObjects
 
+    /**
+     * Performs the guessing game starting at the root of the tree using the given 
+     *   Scanner object to query the user for input and modify the the decision tree 
+     *   if the genie learns any additional information in playing the game.
+     */
     public void guess(Scanner in) {
         root = root.guess(in);
     } // guess
 
+     /**
+     * Writes this node in the serialized format to the given file represented by out
+     * @param out
+     * @throws IOException
+     */
     public void write(FileWriter out) throws IOException {
         root.write(out);
         out.close();
