@@ -8,7 +8,7 @@ class LearningGenie {
 
     public static void main (String[] args) throws FileNotFoundException {
         Scanner in = new Scanner(System.in);
-        DecisionTree DTree = new DecisionTree();//new File("Z:\\Grinnell\\CSC 207\\Homeworks\\Learning Genie\\data"));
+        DecisionTree DTree = new DecisionTree();
 
         System.out.println("I am the learning genie!");
         System.out.println("I can figure out whatever you are thinking of by asking questions.");
@@ -27,13 +27,13 @@ class LearningGenie {
                 userAnswer = in.nextLine();
             }
 
-            if(Helpers.IsNegativeResponse(userAnswer)) {
+            if(userAnswer.equals("no")) {
                 shouldContinue = false;
             }
         }
 
         try {
-            FileWriter f = new FileWriter("Z:\\Grinnell\\CSC 207\\Homeworks\\Learning Genie\\data");
+            FileWriter f = new FileWriter("");
             DTree.write(f);
         } catch (IOException e) {
             e.printStackTrace();
