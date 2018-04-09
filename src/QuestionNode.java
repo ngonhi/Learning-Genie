@@ -9,6 +9,14 @@ public class QuestionNode implements DecisionNode{
     private DecisionNode noTree;
 
     // Constructor
+
+    /**
+     * Construct a Question Node
+     *
+     * @param question
+     * @param yesTree
+     * @param noTree
+     */
     QuestionNode(String question, DecisionNode yesTree, DecisionNode noTree) {
         this.question = question;
         this.yesTree = yesTree;
@@ -19,6 +27,7 @@ public class QuestionNode implements DecisionNode{
     public int countObjects() {
         return this.yesTree.countObjects() + this.noTree.countObjects();
     }
+
     public DecisionNode guess(Scanner in) {
         System.out.print(question);
         String ans = in.nextLine().toLowerCase();

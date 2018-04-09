@@ -7,6 +7,11 @@ public class GuessNode implements DecisionNode{
     private final String object;
 
     // Constructor
+
+    /**
+     * Construct a GuessNode
+     * @param object
+     */
     GuessNode(String object) {
         this.object = object;
     }
