@@ -29,7 +29,7 @@ public class QuestionNode implements DecisionNode{
     }
 
     public DecisionNode guess(Scanner in) {
-        System.out.print(question);
+        System.out.print(question + " ");
         String ans = in.nextLine().trim().toLowerCase();
 
         while (!ans.equals("yes") && !ans.equals("no")) {
