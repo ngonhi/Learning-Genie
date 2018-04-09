@@ -11,9 +11,11 @@ class LearningGenie {
 
     public static void main (String[] args) throws FileNotFoundException {
 
+        //read from the file
         Scanner in = new Scanner(System.in);
         DecisionTree DTree = new DecisionTree(new File(savePath));
 
+        //play the game
         System.out.println("I am the learning genie!");
         System.out.println("I can figure out whatever you are thinking of by asking questions.");
         System.out.println("I know " + DTree.countObjects() + " things!\n");
@@ -36,6 +38,7 @@ class LearningGenie {
             }
         }
 
+        //write into file
         try {
             FileWriter f = new FileWriter(savePath);
             DTree.write(f);
