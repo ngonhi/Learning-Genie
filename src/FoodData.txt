@@ -1,0 +1,31 @@
+#Is it vegetarian?
+#Is it green?
+#Is it cooked?
+#Is it a legume dish?
+Green Dal
+Roasted Brussels Sprouts
+#Is it a salad dish?
+Ceaser Salad
+Green Tea
+#Is it a dairy product?
+#Is it a liquid?
+Chocolate Milk
+String Cheese
+#Is it soy-based?
+Mapo Tofu
+Mushroom Risotto
+#Is it beef?
+#Is it expensive?
+#Is it Japanese?
+Kobe Beef
+Beef Wellington
+#Is it Vietnamese?
+Beef Pho
+Hamburger
+#Is it chicken?
+#Is it fried?
+Fried Chicken Wings
+Chicken Pot Pie
+#Is it fish?
+Smoked Salmon
+Cocktail Shrimp
